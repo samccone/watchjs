@@ -210,7 +210,7 @@
     };
 
     var watchOne = function (obj, prop, watcher, level, addNRemove) {
-        if ((typeof obj == "string") || (!(obj instanceof Object) && !isArray(obj))) { //accepts only objects and array (not string)
+        if ((typeof obj == "string") || (!(obj instanceof Object) && !isArray(obj)) || prop instanceof Object) { //accepts only objects and array (not string)
             return;
         }
 
